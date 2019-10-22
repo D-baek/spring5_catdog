@@ -8,7 +8,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.catdog.web.controller"})
+@ComponentScan(basePackages = {"com.catdog.web"})
 public class ServletConfig implements WebMvcConfigurer{
 	
 	@Override

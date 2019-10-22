@@ -1,4 +1,4 @@
-package com.catdog.web.controller;
+package com.catdog.web.cmm;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class HomeController {
+public class CommonCtrl {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommonCtrl.class);
 	
 	/**
 	 * Simply selects the home view to render by returning its name.
@@ -28,7 +28,7 @@ public class HomeController {
 		
 		model.addAttribute("serverTime", formattedDate );
 		
-		return "home";
+		return "index";
 	}
 	
 }
