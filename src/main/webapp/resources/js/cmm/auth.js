@@ -41,7 +41,7 @@ auth =(()=>{
                     }
                     alert('userid :'+ data.cid)
                     $.ajax({
-                        url : _+'/customer/join',
+                        url : _+'/customers/',
                         type : 'POST',//crud 4개중 하나
                         dataType : 'json',
                         data : JSON.stringify(data),//상대방의 받는녀석의 기준이되서 타입을 맞춰준다.
@@ -76,7 +76,7 @@ auth =(()=>{
                     alert('cid : '+login_data.cid+','+'pwd : '+login_data.pwd+','+'pname : '+login_data.pname)
                     $.ajax({
                         //전부다 스트링값 뒤에틑 값이니까 객체도 들어오고 스트링도 들어오고 함
-                        url : _+'/customer/login',
+                        url : _+'/customers/login',
                         type : 'POST',
                         dataType : 'json',
                         data : JSON.stringify(login_data),

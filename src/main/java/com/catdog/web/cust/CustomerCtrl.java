@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.catdog.web.utl.Printer;
+import lombok.extern.log4j.Log4j;
 
 @RestController								//rest방식
 @RequestMapping("/customers")
@@ -22,11 +23,10 @@ public class CustomerCtrl {
 		@PostMapping("/")  //create
 		public Map<?,?> join(@RequestBody Customer customer) { 
 			//logger.info("ajax가 보낸 아이디와 비번입니다 {} ",customer.getCid()+","+customer.getPwd()+customer.getPname());
-			printer.accept("람다 프린터가 보낸 값 "+customer.getCid()+","+customer.getPwd()+customer.getPname());
+			printer.accept("람다 프린터가 보낸 값 "+customer.getCid()+","+customer.getPwd());
 			Map<String, Object> map2 = new HashMap<>();
 			map2.put("cid", customer.getCid());
 			map2.put("pwd",customer.getPwd());
-			map2.put("pname",customer.getPname());
 			//logger.info("map에 담긴 아이디와 비번입니다 {} ",map2.get("cid")+","+map2.get("pwd")+","+map2.get("pname"));
 			return map2;
 		} 
